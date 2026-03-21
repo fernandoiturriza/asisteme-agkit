@@ -63,18 +63,18 @@ project-name/
 ## Setup Steps
 
 1. Create project directory
-2. `pnpm init -y`
-3. Install deps: `pnpm install commander @inquirer/prompts chalk ora cosmiconfig`
+2. `npm init -y`
+3. Install deps: `npm install commander @inquirer/prompts chalk ora cosmiconfig`
 4. Configure bin in package.json
-5. `pnpm link` for local testing
+5. `npm link` for local testing
 
 ---
 
 ## Publishing
 
 ```bash
-pnpm login
-pnpm publish
+npm login
+npm publish
 ```
 
 ---

@@ -1,7 +1,7 @@
 {
     "mcpServers": {
         "context7": {
-            "command": "pnpm dlx",
+            "command": "npx",
             "args": [
                 "-y",
                 "@upstash/context7-mcp",
@@ -10,7 +10,7 @@
             ]
         },
         "shadcn": {
-            "command": "pnpm dlx",
+            "command": "npx",
             "args": [
                 "shadcn@latest",
                 "mcp"

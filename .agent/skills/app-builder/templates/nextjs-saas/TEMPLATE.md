@@ -91,12 +91,12 @@ project-name/
 
 1. Initialize project (Node 24):
    ```bash
-   pnpm create next-app@latest {{name}} --typescript --eslint
+   npx create-next-app@latest {{name}} --typescript --eslint
    ```
 
 2. Install core libraries:
    ```bash
-   pnpm install next-auth@beta stripe resend @prisma/client
+   npm install next-auth@beta stripe resend @prisma/client
    ```
 
 3. Install Tailwind v4 (Add to globals.css):
@@ -108,15 +108,15 @@ project-name/
 
 5. Sync Database:
    ```bash
-   pnpm dlx prisma db push
+   npx prisma db push
    ```
 
 6. Run local Webhook:
    ```bash
-   pnpm run stripe:listen
+   npm run stripe:listen
    ```
 
 7. Run project:
    ```bash
-   pnpm run dev
+   npm run dev
    ```

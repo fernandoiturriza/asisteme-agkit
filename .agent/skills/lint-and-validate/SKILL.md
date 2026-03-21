@@ -11,9 +11,9 @@ allowed-tools: Read, Glob, Grep, Bash
 ### Procedures by Ecosystem
 
 #### Node.js / TypeScript
-1. **Lint/Fix:** `pnpm run lint` or `pnpm dlx eslint "path" --fix`
-2. **Types:** `pnpm dlx tsc --noEmit`
-3. **Security:** `pnpm audit --audit-level=high`
+1. **Lint/Fix:** `npm run lint` or `npx eslint "path" --fix`
+2. **Types:** `npx tsc --noEmit`
+3. **Security:** `npm audit --audit-level=high`
 
 #### Python
 1. **Linter (Ruff):** `ruff check "path" --fix` (Fast & Modern)
@@ -22,7 +22,7 @@ allowed-tools: Read, Glob, Grep, Bash
 
 ## The Quality Loop
 1. **Write/Edit Code**
-2. **Run Audit:** `pnpm run lint && pnpm dlx tsc --noEmit`
+2. **Run Audit:** `npm run lint && npx tsc --noEmit`
 3. **Analyze Report:** Check the "FINAL AUDIT REPORT" section.
 4. **Fix & Repeat:** Submitting code with "FINAL AUDIT" failures is NOT allowed.
 

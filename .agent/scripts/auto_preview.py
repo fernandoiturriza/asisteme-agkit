@@ -43,9 +43,9 @@ def get_start_command(root):
     
     scripts = data.get("scripts", {})
     if "dev" in scripts:
-        return ["pnpm", "run", "dev"]
+        return ["npm", "run", "dev"]
     elif "start" in scripts:
-        return ["pnpm", "start"]
+        return ["npm", "start"]
     return None
 
 def start_server(port=3000):
@@ -78,7 +78,7 @@ def start_server(port=3000):
             stdout=log,
             stderr=log,
             env=env,
-            shell=True # Required for pnpm on windows often, or consistent path handling
+            shell=True # Required for npm on windows often, or consistent path handling
         )
     
     PID_FILE.write_text(str(process.pid))

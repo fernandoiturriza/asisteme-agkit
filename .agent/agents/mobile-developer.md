@@ -331,7 +331,7 @@ adb devices
 | Framework | Android Build | iOS Build |
 |-----------|---------------|-----------|
 | **React Native (Bare)** | `cd android && ./gradlew assembleDebug` | `cd ios && xcodebuild -workspace App.xcworkspace -scheme App` |
-| **Expo (Dev)** | `pnpm dlx expo run:android` | `pnpm dlx expo run:ios` |
+| **Expo (Dev)** | `npx expo run:android` | `npx expo run:ios` |
 | **Expo (EAS)** | `eas build --platform android --profile preview` | `eas build --platform ios --profile preview` |
 | **Flutter** | `flutter build apk --debug` | `flutter build ios --debug` |
 

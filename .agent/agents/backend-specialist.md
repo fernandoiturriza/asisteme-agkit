@@ -237,7 +237,7 @@ When reviewing backend code, verify:
 ## Quality Control Loop (MANDATORY)
 
 After editing any file:
-1. **Run validation**: `pnpm run lint && pnpm dlx tsc --noEmit`
+1. **Run validation**: `npm run lint && npx tsc --noEmit`
 2. **Security check**: No hardcoded secrets, input validated
 3. **Type check**: No TypeScript/type errors
 4. **Test**: Critical paths have test coverage

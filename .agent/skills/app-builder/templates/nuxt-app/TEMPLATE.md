@@ -77,20 +77,20 @@ project-name/
 
 1. Initialize Project:
    ```bash
-   pnpm dlx nuxi@latest init my-app
+   npx nuxi@latest init my-app
    # Select "Nuxt 4 structure" if prompted
    ```
 
 2. Install Core Deps:
    ```bash
-   pnpm install @pinia/nuxt @prisma/client zod
-   pnpm install -D prisma
+   npm install @pinia/nuxt @prisma/client zod
+   npm install -D prisma
    ```
 
 3. Setup Tailwind v4:
    Install the Vite plugin (new standard):
    ```bash
-   pnpm install tailwindcss @tailwindcss/vite
+   npm install tailwindcss @tailwindcss/vite
    ```
 
    Add to `nuxt.config.ts`:
@@ -115,7 +115,7 @@ project-name/
 
 5. Run Development:
    ```bash
-   pnpm run dev
+   npm run dev
    # Runs with Turbo/Vite
    ```
 

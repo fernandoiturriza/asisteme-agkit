@@ -38,7 +38,7 @@ Analysis:
 | Error Type | Solution Strategy |
 |------------|-------------------|
 | TypeScript Error | Fix type, add missing import |
-| Missing Dependency | Run pnpm install |
+| Missing Dependency | Run npm install |
 | Port Conflict | Suggest alternative port |
 | Database Error | Check migration, validate connection |
 

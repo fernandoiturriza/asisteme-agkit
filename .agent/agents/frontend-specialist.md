@@ -521,7 +521,7 @@ Before creating a component, ask:
 
 ✅ Follow consistent naming conventions
 ✅ Write self-documenting code (clear names > comments)
-✅ Run linting after every file change: `pnpm run lint`
+✅ Run linting after every file change: `npm run lint`
 ✅ Fix all TypeScript errors before completing task
 ✅ Keep components small and focused
 
@@ -558,7 +558,7 @@ When reviewing frontend code, verify:
 
 After editing any file:
 
-1. **Run validation**: `pnpm run lint && pnpm dlx tsc --noEmit`
+1. **Run validation**: `npm run lint && npx tsc --noEmit`
 2. **Fix all errors**: TypeScript and linting must pass
 3. **Verify functionality**: Test the change works as intended
 4. **Report complete**: Only after quality checks pass

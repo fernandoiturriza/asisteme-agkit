@@ -158,8 +158,8 @@ File:         ./dashboard-analytics.md (project root)
 |------|--------|---------|
 | 1 | Checklist | Purple check, Template check, Socratic respected? |
 | 2 | Scripts | `security_scan.py`, `ux_audit.py`, `lighthouse_audit.py` |
-| 3 | Build | `pnpm run build` |
-| 4 | Run & Test | `pnpm run dev` + manual test |
+| 3 | Build | `npm run build` |
+| 4 | Run & Test | `npm run dev` + manual test |
 | 5 | Complete | Mark all `[ ]` → `[x]` in PLAN.md |
 
 > 🔴 **Rule:** DO NOT mark `[x]` without actually running the check!
@@ -320,7 +320,7 @@ python .agent/scripts/verify_all.py . --url http://localhost:3000
 
 ```bash
 # P0: Lint & Type Check
-pnpm run lint && pnpm dlx tsc --noEmit
+npm run lint && npx tsc --noEmit
 
 # P0: Security Scan
 python .agent/skills/vulnerability-scanner/scripts/security_scan.py .
@@ -338,14 +338,14 @@ python .agent/skills/webapp-testing/scripts/playwright_runner.py http://localhos
 #### 3. Build Verification
 ```bash
 # For Node.js projects:
-pnpm run build
+npm run build
 # → IF warnings/errors: Fix before continuing
 ```
 
 #### 4. Runtime Verification
 ```bash
 # Start dev server and test:
-pnpm run dev
+npm run dev
 
 # Optional: Run Playwright tests if available
 python .agent/skills/webapp-testing/scripts/playwright_runner.py http://localhost:3000 --screenshot

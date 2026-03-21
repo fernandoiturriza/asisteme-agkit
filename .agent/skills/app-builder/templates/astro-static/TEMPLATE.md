@@ -49,11 +49,11 @@ project-name/
 
 ## Setup Steps
 
-1. `pnpm create astro@latest {{name}}`
-2. Add integrations: `pnpm dlx astro add mdx tailwind sitemap`
+1. `npm create astro@latest {{name}}`
+2. Add integrations: `npx astro add mdx tailwind sitemap`
 3. Configure `astro.config.mjs`
 4. Create content collections
-5. `pnpm run dev`
+5. `npm run dev`
 
 ---
 

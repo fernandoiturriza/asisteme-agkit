@@ -82,18 +82,18 @@ project-name/
 
 1. Initialize Project:
    ```bash
-   pnpm create expo-app@latest my-app --template default
+   npx create-expo-app@latest my-app --template default
    cd my-app
    ```
 
 2. Install Core Dependencies:
    ```bash
-   pnpm dlx expo install expo-router react-native-safe-area-context react-native-screens expo-link expo-constants expo-status-bar
+   npx expo install expo-router react-native-safe-area-context react-native-screens expo-link expo-constants expo-status-bar
    ```
 
 3. Install NativeWind v4:
    ```bash
-   pnpm install nativewind tailwindcss react-native-reanimated
+   npm install nativewind tailwindcss react-native-reanimated
    ```
 
 4. Configure NativeWind (Babel & CSS):
@@ -103,7 +103,7 @@ project-name/
 
 5. Run Project:
    ```bash
-   pnpm dlx expo start -c
+   npx expo start -c
    # Press 'i' for iOS simulator or 'a' for Android emulator
    ```
 

@@ -5,7 +5,7 @@ Script: lighthouse_audit.py
 Purpose: Run Lighthouse performance audit on a URL
 Usage: python lighthouse_audit.py https://example.com
 Output: JSON with performance scores
-Note: Requires lighthouse CLI (pnpm install -g lighthouse)
+Note: Requires lighthouse CLI (npm install -g lighthouse)
 """
 import subprocess
 import json
@@ -55,7 +55,7 @@ def run_lighthouse(url: str) -> dict:
     except subprocess.TimeoutExpired:
         return {"error": "Lighthouse audit timed out"}
     except FileNotFoundError:
-        return {"error": "Lighthouse CLI not found. Install with: pnpm install -g lighthouse"}
+        return {"error": "Lighthouse CLI not found. Install with: npm install -g lighthouse"}
 
 def get_summary(categories: dict) -> str:
     """Generate summary based on scores."""

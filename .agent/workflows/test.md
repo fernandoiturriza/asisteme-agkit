@@ -71,7 +71,7 @@ When asked to test a file or feature:
 
 ---
 
-Run with: `pnpm test`
+Run with: `npm test`
 ```
 
 ### For Test Execution

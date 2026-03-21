@@ -7,7 +7,7 @@ Usage:
     python test_runner.py <project_path> [--coverage]
 
 Supports:
-    - Node.js: pnpm test, jest, vitest
+    - Node.js: npm test, jest, vitest
     - Python: pytest, unittest
 """
 
@@ -44,24 +44,24 @@ def detect_test_framework(project_path: Path) -> dict:
             
             # Check for test script
             if "test" in scripts:
-                result["framework"] = "pnpm test"
-                result["cmd"] = ["pnpm", "test"]
+                result["framework"] = "npm test"
+                result["cmd"] = ["npm", "test"]
                 
                 # Try to detect specific framework for coverage
                 if "vitest" in deps:
                     result["framework"] = "vitest"
-                    result["coverage_cmd"] = ["pnpm dlx", "vitest", "run", "--coverage"]
+                    result["coverage_cmd"] = ["npx", "vitest", "run", "--coverage"]
                 elif "jest" in deps:
                     result["framework"] = "jest"
-                    result["coverage_cmd"] = ["pnpm dlx", "jest", "--coverage"]
+                    result["coverage_cmd"] = ["npx", "jest", "--coverage"]
             elif "vitest" in deps:
                 result["framework"] = "vitest"
-                result["cmd"] = ["pnpm dlx", "vitest", "run"]
-                result["coverage_cmd"] = ["pnpm dlx", "vitest", "run", "--coverage"]
+                result["cmd"] = ["npx", "vitest", "run"]
+                result["coverage_cmd"] = ["npx", "vitest", "run", "--coverage"]
             elif "jest" in deps:
                 result["framework"] = "jest"
-                result["cmd"] = ["pnpm dlx", "jest"]
-                result["coverage_cmd"] = ["pnpm dlx", "jest", "--coverage"]
+                result["cmd"] = ["npx", "jest"]
+                result["coverage_cmd"] = ["npx", "jest", "--coverage"]
                 
         except:
             pass

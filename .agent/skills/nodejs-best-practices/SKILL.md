@@ -84,7 +84,7 @@ ESM (import/export)
 
 CommonJS (require)
 ├── Legacy compatibility
-├── More pnpm packages support
+├── More npm packages support
 └── Use for: existing codebases, some edge cases
 ```
 

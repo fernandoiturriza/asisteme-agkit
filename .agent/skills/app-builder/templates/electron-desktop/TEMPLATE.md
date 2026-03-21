@@ -61,11 +61,11 @@ project-name/
 
 ## Setup Steps
 
-1. `pnpm create vite {{name}} -- --template react-ts`
-2. Install: `pnpm install -D electron electron-builder vite-plugin-electron`
+1. `npm create vite {{name}} -- --template react-ts`
+2. Install: `npm install -D electron electron-builder vite-plugin-electron`
 3. Create electron/ directory
 4. Configure main process
-5. `pnpm run electron:dev`
+5. `npm run electron:dev`
 
 ---
 

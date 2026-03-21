@@ -122,14 +122,14 @@ export const metadata: Metadata = {
 
 1. Initialize Project:
    ```bash
-   pnpm create next-app@latest my-site --typescript --tailwind --eslint
+   npx create-next-app@latest my-site --typescript --tailwind --eslint
    # Select 'Yes' for App Router
    # Select 'No' for 'Would you like to customize the default import alias?'
    ```
 
 2. Install Auxiliary Libraries:
    ```bash
-   pnpm install framer-motion lucide-react clsx tailwind-merge
+   npm install framer-motion lucide-react clsx tailwind-merge
    # clsx and tailwind-merge help handle dynamic classes better
    ```
 
@@ -145,7 +145,7 @@ export const metadata: Metadata = {
 
 4. Development:
    ```bash
-   pnpm run dev --turbopack
+   npm run dev --turbopack
    ```
 
 ---
@@ -157,7 +157,7 @@ export const metadata: Metadata = {
 | Vercel | Git Push | Auto-detects Next.js. Best for performance. |
 | GitHub Pages | GitHub Actions | Need to set `basePath` in `next.config.ts` if not using a custom domain. |
 | AWS S3 / CloudFront | Upload out folder | Ensure Error Document is configured to `404.html`. |
-| Netlify | Git Push | Set build command to `pnpm run build`. |
+| Netlify | Git Push | Set build command to `npm run build`. |
 
 ---
 

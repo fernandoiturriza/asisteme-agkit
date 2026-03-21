@@ -34,14 +34,14 @@ Before any deployment:
 ## 🚀 Pre-Deploy Checklist
 
 ### Code Quality
-- [ ] No TypeScript errors (`pnpm dlx tsc --noEmit`)
-- [ ] ESLint passing (`pnpm dlx eslint .`)
-- [ ] All tests passing (`pnpm test`)
+- [ ] No TypeScript errors (`npx tsc --noEmit`)
+- [ ] ESLint passing (`npx eslint .`)
+- [ ] All tests passing (`npm test`)
 
 ### Security
 - [ ] No hardcoded secrets
 - [ ] Environment variables documented
-- [ ] Dependencies audited (`pnpm audit`)
+- [ ] Dependencies audited (`npm audit`)
 
 ### Performance
 - [ ] Bundle size acceptable
@@ -144,7 +144,7 @@ error TS2345: Argument of type 'string' is not assignable...
 
 ### Resolution
 1. Fix TypeScript error in `src/services/user.ts:45`
-2. Run `pnpm run build` locally to verify
+2. Run `npm run build` locally to verify
 3. Try `/deploy` again
 
 ### Rollback Available

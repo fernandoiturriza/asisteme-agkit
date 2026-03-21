@@ -7,7 +7,7 @@ Usage:
     python lint_runner.py <project_path>
 
 Supports:
-    - Node.js: pnpm run lint, pnpm dlx tsc --noEmit
+    - Node.js: npm run lint, npx tsc --noEmit
     - Python: ruff check, mypy
 """
 
@@ -44,13 +44,13 @@ def detect_project_type(project_path: Path) -> dict:
             
             # Check for lint script
             if "lint" in scripts:
-                result["linters"].append({"name": "pnpm lint", "cmd": ["pnpm", "run", "lint"]})
+                result["linters"].append({"name": "npm lint", "cmd": ["npm", "run", "lint"]})
             elif "eslint" in deps:
-                result["linters"].append({"name": "eslint", "cmd": ["pnpm dlx", "eslint", "."]})
+                result["linters"].append({"name": "eslint", "cmd": ["npx", "eslint", "."]})
             
             # Check for TypeScript
             if "typescript" in deps or (project_path / "tsconfig.json").exists():
-                result["linters"].append({"name": "tsc", "cmd": ["pnpm dlx", "tsc", "--noEmit"]})
+                result["linters"].append({"name": "tsc", "cmd": ["npx", "tsc", "--noEmit"]})
                 
         except:
             pass
@@ -81,9 +81,9 @@ def run_linter(linter: dict, cwd: Path) -> dict:
     try:
         cmd = linter["cmd"]
         
-        # Windows compatibility for pnpm/pnpm dlx
+        # Windows compatibility for npm/npx
         if platform.system() == "Windows":
-            if cmd[0] in ["pnpm", "pnpm dlx"]:
+            if cmd[0] in ["npm", "npx"]:
                 # Force .cmd extension on Windows
                 if not cmd[0].lower().endswith(".cmd"):
                     cmd[0] = f"{cmd[0]}.cmd"
