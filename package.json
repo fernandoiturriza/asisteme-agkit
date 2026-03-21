@@ -1,5 +1,5 @@
 {
-  "name": "@fernandoitur/asisteme-agkit",
+  "name": "@fernandoitur/asisteme-cli",
   "version": "1.2.0",
   "description": "Plantilla global inicializadora de agentes de Antigravity",
   "type": "module",
