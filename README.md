@@ -29,3 +29,14 @@ npx @fernandoitur/asisteme-agkit update
 ## Funcionalidades
 - **Init:** Copia de forma rápida la carpeta `.agent`.
 - **Update:** Actualiza tu proyecto local para tener la versión más novedosa de tus directrices y herramientas de agentes Antigravity.
+
+---
+
+## Créditos y Agradecimientos
+
+Este proyecto es una adaptación y extensión personalizada para el ecosistema de **Asisteme**, basada originalmente en el excelente trabajo de:
+
+- **Antigravity Kit** por [vudovn](https://github.com/vudovn/antigravity-kit)
+
+Agradecemos a la comunidad por compartir herramientas que nos permiten construir flujos de IA más eficientes.
+

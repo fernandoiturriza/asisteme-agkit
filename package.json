@@ -1,19 +1,19 @@
 {
   "name": "@fernandoitur/asisteme-agkit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Plantilla global inicializadora de agentes de Antigravity",
   "type": "module",
   "bin": {
     "asisteme-agkit": "bin/cli.js"
   },
   "files": [
-    ".agent",
-    "bin",
-    "masSkills"
+    "bin"
   ],
   "dependencies": {
     "@clack/prompts": "^0.7.0",
     "fs-extra": "^11.2.0",
-    "picocolors": "^1.0.0"
+    "gradient-string": "^3.0.0",
+    "picocolors": "^1.0.0",
+    "tiged": "^2.12.7"
   }
 }
