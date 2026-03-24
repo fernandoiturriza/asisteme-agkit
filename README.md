@@ -1,4 +1,4 @@
-# Asisteme AGKit
+# Asisteme CLI
 
 Plantilla global inicializadora de agentes de Antigravity para inyectar entornos `.agent` en repositorios y proyectos.
 

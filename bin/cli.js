@@ -6,7 +6,7 @@ import { intro, outro, spinner, note, isCancel, cancel, select, multiselect, tex
 import pc from 'picocolors';
 
 // Obtenemos la ruta donde está instalado globalmente este paquete
-import tiged from 'tiged';
+import { downloadTemplate } from 'giget';
 
 import gradient from 'gradient-string';
 
@@ -22,7 +22,7 @@ const BANNER_ART = `
 ██║  ██║███████║██║███████║   ██║   ███████╗██║ ╚═╝ ██║███████╗
 ╚═╝  ╚═╝╚══════╝╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝     ╚═╝╚══════╝
 
-              ⚡ AGENT KIT (agkit) ⚡
+              ⚡ ASISTEME CLI ⚡
 `;
 
 const agkitGradient = gradient(['#4FACFE', '#00F2FE', '#007BFD']);
@@ -87,12 +87,11 @@ async function executeAction(action) {
 
     s.start('Descargando entorno de agentes desde GitHub...');
     try {
-      const emitter = tiged(`${REPO_BASE}/.agent`, {
-        disableCache: true,
+      await downloadTemplate(`github:${REPO_BASE}/.agent`, {
+        dir: targetAgentPath,
         force: true,
+        preferOffline: false,
       });
-
-      await emitter.clone(targetAgentPath);
       s.stop('¡Plantilla descargada con éxito!');
 
       // Llamada al recolector de contexto interactivo
@@ -112,12 +111,11 @@ async function executeAction(action) {
 
     s.start('Actualizando entorno de agentes desde la nube...');
     try {
-      const emitter = tiged(`${REPO_BASE}/.agent`, {
-        disableCache: true,
+      await downloadTemplate(`github:${REPO_BASE}/.agent`, {
+        dir: targetAgentPath,
         force: true,
+        preferOffline: false,
       });
-
-      await emitter.clone(targetAgentPath);
       s.stop('¡Entorno actualizado!');
       note('Se han sobrescrito los archivos base del entorno .agent con la última versión de GitHub.', 'Aviso');
       outro(pc.green('🚀 Actualización completada satisfactoriamente.'));
@@ -141,12 +139,11 @@ async function executeAction(action) {
       // Limpiamos temporal previo si existe
       if (fs.existsSync(tempSkillsPath)) fs.removeSync(tempSkillsPath);
 
-      const emitter = tiged(`${REPO_BASE}/masSkills`, {
-        disableCache: true,
+      await downloadTemplate(`github:${REPO_BASE}/masSkills`, {
+        dir: tempSkillsPath,
         force: true,
+        preferOffline: false,
       });
-
-      await emitter.clone(tempSkillsPath);
       s.stop('Lista de skills sincronizada.');
 
       const availableSkills = fs.readdirSync(tempSkillsPath)
