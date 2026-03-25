@@ -11,7 +11,7 @@ import { downloadTemplate } from 'giget';
 import gradient from 'gradient-string';
 
 // Configuración del repositorio central (Usuario/Repositorio)
-const REPO_BASE = 'fernandoiturriza/asisteme-agkit';
+const REPO_BASE = 'fernandoiturriza/asisteme-cli';
 
 // Diseño de Banner ASCII
 const BANNER_ART = `

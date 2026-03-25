@@ -1,5 +1,5 @@
 {
-  "name": "@fernandoitur/asisteme-cli",
+  "name": "asisteme-cli",
   "version": "1.2.2",
   "description": "Plantilla global inicializadora de agentes de Antigravity",
   "type": "module",
